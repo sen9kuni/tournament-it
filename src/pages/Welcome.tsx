@@ -26,7 +26,7 @@ const FormSchema = z.object({
   }),
 })
 
-function Wellcome() {
+function Welcome() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   })
@@ -38,7 +38,7 @@ function Wellcome() {
       <div className='bg-white p-5 rounded-sm'>
         <div className=' flex flex-col gap-2 items-center'>
           <span>Hello there👀</span>
-          <span>Wellcome to Tournamet ✨IT✨</span>
+          <span>Welcome to Tournamet ✨IT✨</span>
           <span>Please input this start form</span>
           <Form {...form}>
             <form
@@ -97,4 +97,4 @@ function Wellcome() {
   )
 }
 
-export default Wellcome
+export default Welcome
